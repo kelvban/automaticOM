@@ -18,5 +18,5 @@ from scanhosts.views import *
 
 urlpatterns = [
 #    url(r'^admin/', include(admin.site.urls)),
-	 url(r'^setinfos/$',user_info),
+	 url(r'^sendinfos/$',user_info()),
 ]
