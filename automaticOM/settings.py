@@ -85,7 +85,7 @@ DATABASES = {
 		'NAME':'automaticOM',
 		'USER':'automaticOM',
 		'PASSWORD':'automaticOM',
-		'HOST':'47.98.151.93',
+		'HOST':'127.0.0.1',
 		'port':'',
 		'OPTIONS':{},
 		'init_command':'SET storage_engine=INNODB,''SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED,autocommit=1,names "utf8";',

@@ -23,3 +23,12 @@ def user_info(request):
 			"ip":ip_addr,
 			"ua":user_ua}
 	return HttpResponse(json.dumps(result),content_type="application/json")
+def user_history(request):
+	ip_list=UserIPInfo.objects.all()
+	infos={}
+	for item in ip_list:
+		infos[item.ip]=[b_obj.user_agent for b_obj in BrowseInfo.objects.filter(user_ip_id=item.id)]
+	result={"status":"success",
+			"info":infos,
+	}
+	return HttpResponse(json.dumps(result),content_type="application/json")
