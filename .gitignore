@@ -131,3 +131,6 @@ dmypy.json
 #Idea
 .idea
 *.iml
+
+#nohup.out
+nohup.out
