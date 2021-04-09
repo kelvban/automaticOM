@@ -111,3 +111,40 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+#logging
+LOGGING={
+	'version': 1,
+	'disable_existing_loggers': False,
+	'formatters':{
+		'verbose':{
+			'format':'[%(levelname)s %(asctime)s %(module)s:%(lineno)d] %(message)s',
+			'datefmt':'%Y%m%d %H:%M:%S',
+		},
+	},
+	'handlers':{
+		'file':{
+			'level':'INFO',
+			'class':'logging.FileHandler',
+			'formatter':'verbose',
+			'filename':'/tmp/automaticOM/error.log',
+		},
+	},
+	'loggers':{
+		'django':{
+			'handlers':['file'],
+			'level':'INFO',
+			'propagate':True,
+		},
+	}
+}
+
+
+# email
+EMAIL_HOST="smtp.qq.com"
+EMAIL_HOST_USER="*********@qq.com"
+EMAIL_HOST_PASSWORD="************"
+EMAIL_USE_TLS=False
+
+
